@@ -1,0 +1,10 @@
+fr\utbm\course\entity\CourseSession_.class
+fr\utbm\course\entity\Course_.class
+fr\utbm\course\entity\CourseSession.class
+fr\ubtm\course\utils\GenerateSchema.class
+fr\ubtm\course\utils\HibernateUtil.class
+fr\utbm\course\entity\Course.class
+fr\utbm\course\entity\Location_.class
+fr\utbm\course\entity\Client.class
+fr\utbm\course\entity\Location.class
+fr\utbm\course\entity\Client_.class
