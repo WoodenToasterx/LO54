@@ -19,20 +19,11 @@ public class GenerateSchema {
      public static void main(String[] args) {
          Session session = null;
          try{
-              session = HibernateUtil.getSessionFactory().openSession();
-              Transaction T = session.beginTransaction();
-              Course cli = new Course();
-              cli.setId(1);
-              cli.setTitle("Math");
-              session.persist(cli);
-              T.commit();
-              
+              session = HibernateUtil.getSessionFactory().openSession();              
          }catch(Exception e)
          {
              System.out.println(e.getStackTrace().toString());
-         }
-              
-         
+         }         
          System.out.println("aa");
            
    }

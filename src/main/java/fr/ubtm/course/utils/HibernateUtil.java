@@ -5,11 +5,7 @@
  */
 package fr.ubtm.course.utils;
 
-import fr.utbm.course.entity.Client;
-import fr.utbm.course.entity.Course;
-import fr.utbm.course.entity.CourseSession;
-import fr.utbm.course.entity.Location;
-import org.hibernate.cfg.AnnotationConfiguration;
+import org.hibernate.cfg.Configuration;
 import org.hibernate.SessionFactory;
 
 /**
@@ -26,7 +22,7 @@ public class HibernateUtil {
         try {
             // Create the SessionFactory from standard (hibernate.cfg.xml) 
             // config file.
-            sessionFactory = new AnnotationConfiguration().configure("hibernate.cfg.xml").buildSessionFactory();
+            sessionFactory = new Configuration().configure().buildSessionFactory();
         } catch (Throwable ex) {
             // Log the exception. 
             System.err.println("Initial SessionFactory creation failed." + ex);
