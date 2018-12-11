@@ -53,7 +53,7 @@ public class CourseSessionController  extends HttpServlet {
             client.setAddress(request.getParameter("address"));
             client.setEmail(request.getParameter("email"));
             client.setPhone(request.getParameter("phone"));
-            int id = Integer.parseInt(request.getParameter("session"));
+            int id = Integer.parseInt(request.getParameter("sessionId"));
             
             CourseSession courseSession = cs.getSessionById(id);   
             client.setCourseSession(courseSession);

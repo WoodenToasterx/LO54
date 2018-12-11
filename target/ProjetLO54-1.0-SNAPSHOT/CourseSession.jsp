@@ -21,7 +21,7 @@
         <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
 
         <!-- Custom styles for this template -->
-        <link href="css/one-page-wonder.min.css" rel="stylesheet">
+        <link href="css/one-page-wonder.css" rel="stylesheet">
 
     </head>
 
@@ -54,7 +54,7 @@
             <div class="masthead-content">
                 <div class="container">
                     <h1 class="masthead-heading mb-0">Poudlard</h1>
-                    <h2 class="masthead-subheading mb-0">Cours réservés aux élèves de Gryffondor</h2>
+                    <h2 class="masthead-subheading mb-0">Ecole de sorcellerie</h2>
                 </div>
             </div>
         </header>
@@ -93,11 +93,9 @@
                                 <td> Adress: </td>
                                 <td><input type="text" name="address"></td>
                             </tr>
-                            <tr>
-                                <td> Session: </td>
-                                <td><input type="text" name="session" value="${session.id}"></td>
-                            </tr>
                         </table>
+                        
+                        <input type="hidden" name="session" value="${session.id}"/>
 
                         <input type="submit" name="addClient" value="Subscribe">
                     </form>

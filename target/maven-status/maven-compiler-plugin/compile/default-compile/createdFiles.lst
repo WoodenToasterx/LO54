@@ -1,6 +1,15 @@
+fr\utbm\course\service\ClientService.class
 fr\ubtm\course\utils\GenerateSchema.class
+fr\utbm\course\service\CourseSessionService.class
+fr\utbm\course\repository\CourseSessionDAO.class
+fr\utbm\course\controller\CourseSessionController.class
 fr\utbm\course\entity\Client.class
+fr\utbm\course\repository\ClientDAO.class
 fr\utbm\course\entity\Location.class
+fr\utbm\course\repository\CourseDAO.class
+fr\utbm\course\controller\CourseController.class
+fr\utbm\course\service\CourseService.class
 fr\utbm\course\entity\CourseSession.class
+fr\utbm\course\controller\ClientController.class
 fr\ubtm\course\utils\HibernateUtil.class
 fr\utbm\course\entity\Course.class

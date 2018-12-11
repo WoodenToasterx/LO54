@@ -6,10 +6,15 @@
 package fr.utbm.course.controller;
 
 import fr.utbm.course.entity.Course;
+import fr.utbm.course.entity.CourseSession;
 import fr.utbm.course.service.CourseService;
+import fr.utbm.course.service.CourseSessionService;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -28,8 +33,25 @@ public class CourseController extends HttpServlet {
             throws ServletException, IOException 
     {
         List<Course> courses;
+        List<CourseSession> courseSession;
         courses = cs.showCourses();
-        request.setAttribute("courses", courses);
+        courseSession = CourseSessionService.showCourseSession();
+        
+        Map<Course, List<CourseSession>> Array = new HashMap<Course, List<CourseSession>>();
+        
+        for (Course item : courses) {
+            List<CourseSession> listSessionByCourse = new ArrayList<CourseSession>();
+            for(CourseSession coursesession : courseSession)
+            {
+                if(coursesession.getCourse().getId() == item.getId())
+                {
+                    listSessionByCourse.add(coursesession);
+                }
+            }
+            Array.put(item, listSessionByCourse);
+        }
+        
+        request.setAttribute("items", Array);
         RequestDispatcher RD = request.getRequestDispatcher("Course.jsp");
         RD.forward(request, response);
 
@@ -43,16 +65,7 @@ public class CourseController extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        if(request.getParameter("addCourse") != null)
-        {
-            String title = request.getParameter("courseTitle");
-            Course course = new Course();
-            course.setTitle(title);
-            cs.addCourse(course);
-            RequestDispatcher rd = request.getRequestDispatcher("Course.jsp");
-            rd.forward(request, response);
-        }
-        
+       
         processRequest(request, response);
     }
 
