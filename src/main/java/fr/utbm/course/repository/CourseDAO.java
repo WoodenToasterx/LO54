@@ -37,4 +37,14 @@ public class CourseDAO {
         session.close();
     }
     
+    public static List<Course> getCourseByName(String courseName)
+    {
+        List<Course> courses = new ArrayList();
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Query query = session.createQuery("FROM Course WHERE title like '%' || ? || '%'");
+        query.setString(0, courseName);
+        courses = query.list();
+        return courses;
+    }
+    
 }

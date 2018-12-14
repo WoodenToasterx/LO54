@@ -3,3 +3,4 @@
 *.jar
 App/*
 Data/*
+target/*

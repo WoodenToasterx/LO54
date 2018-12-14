@@ -130,17 +130,17 @@ header.masthead .bg-circle-4 {
 }
 
 .bg-primary {
-  background-color: #ee0979 !important;
+  background-color: #024B3A !important;
 }
 
 .btn-primary {
-  background-color: #ee0979;
-  border-color: #ee0979;
+  background-color: #024B3A;
+  border-color: #024B3A;
 }
 
 .btn-primary:active, .btn-primary:focus, .btn-primary:hover {
-  background-color: #bd0760 !important;
-  border-color: #bd0760 !important;
+  background-color: #023025 !important;
+  border-color: #023025!important;
 }
 
 .btn-primary:focus {
@@ -149,8 +149,8 @@ header.masthead .bg-circle-4 {
 }
 
 .btn-secondary {
-  background-color: #ff6a00;
-  border-color: #ff6a00;
+  background-color: #3A7717;
+  border-color: #3A7717;
 }
 
 .btn-secondary:active, .btn-secondary:focus, .btn-secondary:hover {

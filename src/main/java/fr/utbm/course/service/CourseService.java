@@ -26,4 +26,11 @@ public class CourseService {
     {
         CourseDAO.addCourse(cours);
     }
+    
+    public static List<Course> showCoursesByName(String courseName)
+    {
+        List<Course> courses;
+        courses = CourseDAO.getCourseByName(courseName);
+        return courses;
+    }
 }
